@@ -1,0 +1,35 @@
+html,body{
+    height: 200px;
+}
+#header1
+{
+    color: black;
+    text-align: center;
+}
+#card1
+{
+    margin-left: 50px;
+   
+    margin-top: 15px;
+}
+#card2
+{
+    margin-right: 70px;
+    margin-top: 15px;
+}
+#head1
+{
+    font-size: 23px;
+    font-weight: bold;
+}
+span:before{
+    content:" "; 
+    display:inline-block; 
+    width:32px;
+}
+
+#head1 span:nth-of-type(2)
+{
+  display:none;
+  background-color:green;
+}
