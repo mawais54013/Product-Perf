@@ -38,7 +38,7 @@ router.get("/getPopular", (req, res) => {
 });
 
 router.get("/getComingSoon", (req, res) => {
-  axios.get("https://api-endpoint.igdb.com/release_dates/?fields=*&filter[platform][eq]=48&order=date:asc&filter[date][gt]=1500619813000&expand=game", {
+  axios.get(`https://api-endpoint.igdb.com/release_dates/?fields=*&filter[platform][eq]=48&order=date:asc&filter[date][gt]=${req.query.r}&expand=game`, {
     headers: {
       "user-key": "b2ea4c0b9c1646c644d68c09d43c0405",
     }

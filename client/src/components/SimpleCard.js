@@ -11,8 +11,14 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider'
 import API from "../utils/API";
+import  { Redirect } from 'react-router-dom'
+import { Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import '../App.css';
-import { CardActionArea } from '@material-ui/core';
+import SearchAppBar from "../components/SearchAppBar";
+import axios from "axios";
+import Product from "./Product";
+import moment from 'moment'
 
 const styles = {
   card: {
@@ -32,7 +38,7 @@ const styles = {
     marginBottom: 12,
   },
 };
-
+ 
 class SimpleCard extends Component {
   
   state={
@@ -43,12 +49,12 @@ class SimpleCard extends Component {
     pop1:[], pop2:[], pop3:[], pop4:[], pop5:[], pop6:[], pop7:[], pop8:[], pop9:[], pop10:[],
     images: [],
     new: [],
+    date: moment().format('x'),
+    toProducts: false,
   };
 
   componentDidMount() {
-
     this.popularGames();
-
  }
 
   tester = () => {
@@ -81,17 +87,24 @@ class SimpleCard extends Component {
   }
 
   newGames = () => {
-    API.getUpcoming()
+    API.getUpcoming(this.state.date)
     .then(res => {
       console.log(res);
       this.setState({ new:res.data })
       console.log(this.state.new);
+      console.log(this.state.new[0].game.name)
     });
-  }
+  } 
+
 
   render() {
+    const listItems = this.state.new.map((items) =>
+      <li>{items.game.name}</li>
+    );
+  
     return (
     <div>
+      <SearchAppBar></SearchAppBar>
       <Grid container spacing={24}>
       <Grid item xs={6}>
         <Card id="card1">
@@ -104,9 +117,13 @@ class SimpleCard extends Component {
           <div>
           {/* {this.state.pop1.name} */}
           <br></br>
+          
+            {/* <Link to="/productinfo"> */}
             <List>
               <ListItemText primary={this.state.pop1.name}/>
             </List>
+            {/* </Link> */}
+            
             <Divider />
             <br></br>
             <List>
@@ -164,9 +181,21 @@ class SimpleCard extends Component {
       <Grid item sm={6}>
         <Card id="card2">
           <Button onClick={() => this.newGames()}>Get Games</Button>
+          <ul>{listItems}</ul>
         </Card>
       </Grid>
-
+      {/* <ul>{this.state.date}</ul> */}
+        <List>
+          {/* <Link to= "/productinfo"> */}
+          <Link to={{
+            pathname:'/productinfo', state: {name: 'max'}
+          }}>
+            <ListItem button>
+              <ListItemText primary="product info"/>
+            </ListItem>
+          </Link>
+        </List>
+        {/* <Product name={"max"}/> */}
       </Grid>
       </div>
     );

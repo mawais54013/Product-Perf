@@ -8,6 +8,6 @@ export default {
         return axios.get("/api/getPopular")
     },
     getUpcoming: function (query) {
-        return axios.get("/api/getComingSoon")
-    }
+        return axios.get("/api/getComingSoon", { params: { r: query } });
+    },
 };
