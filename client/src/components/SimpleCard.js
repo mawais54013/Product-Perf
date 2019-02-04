@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
+import Typography from '@material-ui/core/Typography';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider'
@@ -37,6 +38,9 @@ const styles = {
   pos: {
     marginBottom: 12,
   },
+  selected: {
+    color: 'white',
+  },
 };
  
 class SimpleCard extends Component {
@@ -52,6 +56,7 @@ class SimpleCard extends Component {
     date: moment().format('x'),
     toProducts: false,
   };
+
 
   componentDidMount() {
     this.popularGames();

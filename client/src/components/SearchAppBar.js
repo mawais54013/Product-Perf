@@ -77,10 +77,11 @@ const styles = theme => ({
 });
 
 function SearchAppBar(props) {
+  var bg=require('../images/back6.gif')
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{backgroundColor: 'black', color: 'white'}}>
+      <AppBar position="static" style={{backgroundImage: "url("+bg+")", backgroundRepeat: 'no-repeat', backgroundSize: 'cover',color: 'white'}}>
         <Toolbar>
           {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
             <MenuIcon />

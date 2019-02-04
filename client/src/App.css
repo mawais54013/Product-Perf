@@ -1,5 +1,10 @@
 html,body{
-    height: 200px;
+    height: 1000px;
+    background-image: url("./images/back4.jpg");
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 #header1
 {
@@ -9,18 +14,22 @@ html,body{
 #card1
 {
     margin-left: 50px;
-   
     margin-top: 15px;
+    /* background: black; */
+    opacity: 0.85;
+    /* color:white; */
 }
 #card2
 {
     margin-right: 70px;
+    opacity: 0.85;
     margin-top: 15px;
 }
 #head1
 {
     font-size: 23px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 span:before{
     content:" "; 
