@@ -81,6 +81,7 @@ function SearchAppBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
+    <br/>
       <AppBar position="static" style={{backgroundImage: "url("+bg+")", backgroundRepeat: 'no-repeat', backgroundSize: 'cover',color: 'white'}}>
         <Toolbar>
           {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
