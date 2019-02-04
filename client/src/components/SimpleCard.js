@@ -99,7 +99,11 @@ class SimpleCard extends Component {
 
   render() {
     const listItems = this.state.new.map((items) =>
-      <li>{items.game.name}</li>
+      <li id="list1">{items.game.name}
+        <ul>
+          <li>Date Release: {items.human}</li>
+        </ul>
+      </li>
     );
   
     return (
@@ -111,12 +115,13 @@ class SimpleCard extends Component {
           <div id="head1">
           <br></br>
           <span>Popular Games</span>
-          <span>   </span>
-          </div>
+          <hr></hr>
+          {/* <span>   </span> */}
+          {/* </div>
           <br></br>
-          <div>
+          <div> */}
           {/* {this.state.pop1.name} */}
-          <br></br>
+          <br/>
           
             {/* <Link to="/productinfo"> */}
             <List>
@@ -180,13 +185,17 @@ class SimpleCard extends Component {
       </Grid>
       <Grid item sm={6}>
         <Card id="card2">
-          <Button onClick={() => this.newGames()}>Get Games</Button>
-          <ul>{listItems}</ul>
+          <Button onClick={() => this.newGames()} id="button1">Click To Get Upcoming Games</Button>
+          <div class = "container" id="area1">
+            {listItems}
+          </div>
+          {/* {listItems} */}
         </Card>
       </Grid>
+      <br></br>
       {/* <ul>{this.state.date}</ul> */}
-        <List>
-          {/* <Link to= "/productinfo"> */}
+        {/* <List>
+          <Link to= "/productinfo">
           <Link to={{
             pathname:'/productinfo', state: {name: 'max'}
           }}>
@@ -194,7 +203,7 @@ class SimpleCard extends Component {
               <ListItemText primary="product info"/>
             </ListItem>
           </Link>
-        </List>
+        </List> */}
         {/* <Product name={"max"}/> */}
       </Grid>
       </div>

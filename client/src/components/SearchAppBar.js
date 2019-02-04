@@ -80,28 +80,28 @@ function SearchAppBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor: 'black', color: 'white'}}>
         <Toolbar>
           {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
             <MenuIcon />
           </IconButton> */}
           
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            Game Score
+            NEXTGame
           </Typography>
           
           <div className={classes.grow} />
           <div className={classes.search}>
             <div className={classes.searchIcon}>
-              <SearchIcon />
+              {/* <SearchIcon /> */}
             </div>
-            <InputBase
+            {/* <InputBase
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
-            />
+            /> */}
           </div>
         </Toolbar>
       </AppBar>

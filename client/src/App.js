@@ -65,7 +65,7 @@ class App extends Component {
         <>
           <Switch>
             <Route path="/" exact component={SimpleCard} />
-            <Route path ="/productinfo" exact component={product}/>
+            {/* <Route path ="/productinfo" exact component={product}/> */}
             {/* <Route component={MyMenuAppBar} /> */}
           </Switch>
           

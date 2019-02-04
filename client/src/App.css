@@ -33,3 +33,16 @@ span:before{
   display:none;
   background-color:green;
 }
+
+#area1
+{
+    padding-left: 25px;
+}
+#list1
+{
+    list-style-type:square;
+}
+#button1
+{
+    margin-bottom: 15px;
+}
