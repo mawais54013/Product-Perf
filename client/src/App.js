@@ -3,12 +3,8 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import API from "./utils/API";
 import './App.css';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import SearchAppBar from "./components/SearchAppBar";
 import SimpleCard from "./components/SimpleCard";
+import Welcome from './components/Welcome';
 import product from "./components/Product";
 import { CardActionArea, Typography } from '@material-ui/core';
 
@@ -40,33 +36,33 @@ class App extends Component {
   render() {
     const { classes } = this.props;
     const checkRoutes = (props) => {
-      return(
-        <Router>
-          <>
-          <SimpleCard>
-            <Switch>
-              <Route path ="/productinfo" exact component={product}/>
-            </Switch>
-          </SimpleCard>
-          </>
-        </Router>
-      )
+      // return(
+      //   <Router>
+      //     <>
+      //     <SimpleCard>
+      //       <Switch>
+      //         <Route path ="/productinfo" exact component={product}/>
+      //       </Switch>
+      //     </SimpleCard>
+      //     </>
+      //   </Router>
+      // )
     }
     return (
 
-      // <React.Fragment>
-        
-      //   <SearchAppBar></SearchAppBar>
-      // {/* //   <br></br> */}
-      //    <SimpleCard></SimpleCard>
-      
-      // </React.Fragment>
+      // <Router>
+      //   <>
+      //     <Switch>
+      //       <Route path="/" exact component={SimpleCard} />
+      //     </Switch>
+          
+      //   </>
+      // </Router>
       <Router>
         <>
           <Switch>
-            <Route path="/" exact component={SimpleCard} />
-            {/* <Route path ="/productinfo" exact component={product}/> */}
-            {/* <Route component={MyMenuAppBar} /> */}
+            <Route path="/" exact component={Welcome} />
+            <Route path="/simple" exact component={SimpleCard}/>
           </Switch>
           
         </>
