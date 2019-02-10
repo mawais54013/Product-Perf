@@ -1,22 +1,3 @@
-// import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
-// import "../components/Welcome.css";
-
-// class Welcome extends Component {
-//     render() {
-//         return(
-
-//             <div className = "overlap">
-//                 <div id="logo-text" class="site-title-text">
-//                     <span>NextGame</span>
-//                 </div>
-//             </div>
-//         )
-//     }
-// }
-
-// export default Welcome;
-
 import React from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
@@ -26,6 +7,7 @@ import "../components/Welcome.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
 import SimpleCard from './SimpleCard';
+import Background from '../images/7Lx5.gif'
 
 const styles = theme => ({
   root: {
@@ -40,7 +22,7 @@ const styles = theme => ({
 
 function Welcome(props) {
   const { classes } = props;
-  
+
   return (
     <div className={classes.root} id="area1">
       <Grid container spacing={24}
@@ -48,8 +30,9 @@ function Welcome(props) {
   alignItems="center"
   justify="center"
   style={{ minHeight: '90vh' }}>
-        <Grid item xs={7}>
-          <Paper className={classes.paper} style={{backgroundColor: 'red', color: 'white'}}>
+        <Grid item xs={12}>
+          {/* <Paper className={classes.paper} style={{backgroundColor: 'red', color: 'white'}}> */}
+          <Paper className={classes.paper} style={{backgroundImage: `url(${Background})`,backgroundSize: 'cover',backgroundPosition: 'center'}}>
           <div class="knockout">NEXTGame</div>
           <Link to="/simple"><button class="button">Click To View Games</button></Link> 
           </Paper>

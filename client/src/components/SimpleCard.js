@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
@@ -14,11 +12,8 @@ import Divider from '@material-ui/core/Divider'
 import API from "../utils/API";
 import  { Redirect } from 'react-router-dom'
 import { Link } from "react-router-dom";
-// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import '../App.css';
 import SearchAppBar from "../components/SearchAppBar";
-import axios from "axios";
-import Product from "./Product";
 import moment from 'moment'
 
 const styles = {

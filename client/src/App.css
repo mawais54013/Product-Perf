@@ -1,10 +1,10 @@
 html,body{
-    height: 1000px;
+    height: 100%;
     background-image: url("./images/back4.jpg");
-    background-size: cover;
+    /* background-size:  */
     position: relative;
     background-position: center;
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
 }
 #header1
 {
@@ -54,4 +54,18 @@ span:before{
 #button1
 {
     margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 500px)
+{
+    html
+    {
+        width: 120%;
+        height: 230%;
+    }
+    body
+    {
+        width: 160%;
+        height: 230%;
+    }
 }

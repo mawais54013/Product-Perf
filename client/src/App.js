@@ -17,12 +17,6 @@ class App extends Component {
     images: [],
   };
 
-//   componentDidMount() {
-
-//     this.tester();
-
-//  }
-
   tester = () => {
     API.getgameData()
     .then(res => {
@@ -35,29 +29,8 @@ class App extends Component {
 
   render() {
     const { classes } = this.props;
-    const checkRoutes = (props) => {
-      // return(
-      //   <Router>
-      //     <>
-      //     <SimpleCard>
-      //       <Switch>
-      //         <Route path ="/productinfo" exact component={product}/>
-      //       </Switch>
-      //     </SimpleCard>
-      //     </>
-      //   </Router>
-      // )
-    }
     return (
 
-      // <Router>
-      //   <>
-      //     <Switch>
-      //       <Route path="/" exact component={SimpleCard} />
-      //     </Switch>
-          
-      //   </>
-      // </Router>
       <Router>
         <>
           <Switch>
