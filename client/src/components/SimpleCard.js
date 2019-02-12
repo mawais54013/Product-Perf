@@ -116,11 +116,6 @@ class SimpleCard extends Component {
           <br></br>
           <span>Popular Games</span>
           <hr></hr>
-          {/* <span>   </span> */}
-          {/* </div>
-          <br></br>
-          <div> */}
-          {/* {this.state.pop1.name} */}
           <br/>
           
             {/* <Link to="/productinfo"> */}
@@ -193,18 +188,6 @@ class SimpleCard extends Component {
         </Card>
       </Grid>
       <br></br>
-      {/* <ul>{this.state.date}</ul> */}
-        {/* <List>
-          <Link to= "/productinfo">
-          <Link to={{
-            pathname:'/productinfo', state: {name: 'max'}
-          }}>
-            <ListItem button>
-              <ListItemText primary="product info"/>
-            </ListItem>
-          </Link>
-        </List> */}
-        {/* <Product name={"max"}/> */}
       </Grid>
       </div>
     );
